@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const newElement = document.createElement("div")
+    newElement.innerHTML = "box"
+    newElement.style.height = "200px"
+    newElement.style.width = "200px"
+    newElement.style.border = "2px solid red"
+    newElement.style.borderRadius = "10px"
+    newElement.style.backgroundColor = "aqua"
+
+    const body = document.querySelector("body")
+    body.appendChild(newElement)
+
+</script>
+</html>

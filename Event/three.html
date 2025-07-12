@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+
+        form{
+            position: absolute;
+            top:200px;
+            left:500px;
+        }
+        
+
+        #formid{
+            height: 400px;
+            width: 400px;
+            background-color: blue;
+            border: 3px solid white;
+
+        }
+        label{
+            font-size: 20px;
+            font-weight: 600
+        }
+        input{
+            height: 20px;
+            width: 200px;
+        }
+        button{
+            background-color: pink;
+            border: 2px solid red;
+
+        }
+      
+    </style>
+</head>
+
+<body>
+    <form id="formid" class="container" action="">
+        <div id="first">
+            <label for="username">Username:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Username">
+        </div>
+        <br><br>
+        <div id="second" >
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+        </div>
+        <br><br>
+        <div id="third">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+<script>
+   const btn = document.querySelector("button")
+   btn.addEventListener("click",(e)=>{
+        e.preventDefault()
+   })
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prevent default example</title>
+</head>
+<body>
+   <a class="link" href="https://www.instagram.com">Click</a>
+</body>
+<script>
+   
+    const lnk = document.querySelector(".link")
+    lnk.addEventListener("click",(e)=>{
+        e.preventDefault()
+    })
+</script>
+</html>

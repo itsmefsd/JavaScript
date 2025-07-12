@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate color Changer</title>
+</head>
+
+<body>
+    <h1>Color Changer</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const randomColor = function () {
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
+    let setIntervalId;
+    const start = document.querySelector("#start")
+    const body = document.querySelector("body")
+    start.addEventListener("click",(e)=>{
+
+       setIntervalId = setInterval(()=>{
+              body.style.backgroundColor = randomColor()
+        },1000)
+    })
+    const stop = document.querySelector("#stop")
+    stop.addEventListener("click",()=>{
+        clearInterval(setIntervalId)
+        setIntervalId = null
+                
+    })
+
+</script>
+
+</html>
